@@ -7,7 +7,7 @@ module Xls
       package = Axlsx::Package.new
       work_sheet = package.workbook.add_worksheet(name: 'work_book')
       headers = ["Name", "Phone Number"]
-      data = {name: 'Rajnish Mishra', phone: "7979097455"}
+      data = [{name: 'Rajnish Mishra', phone: "7979097455"}]
       work_sheet.add_row headers
       data.each do |row|
         formatted_row = formatted_excel_data(row)
@@ -21,8 +21,8 @@ module Xls
     end
     def self.formatted_excel_data(row)
       [
-        row[:user_name],
-        row[:phone_number]
+        row[:name],
+        row[:phone]
       ]
     end
     def self.call(name)
