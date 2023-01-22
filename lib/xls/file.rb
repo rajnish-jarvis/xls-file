@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "file/version"
-
+require 'caxlsx'
 module Xls
     def self.generate_xls
       package = Axlsx::Package.new
