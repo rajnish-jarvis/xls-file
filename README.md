@@ -2,6 +2,10 @@
 
 Generate XLS file with data and headers only.
 
+## Rails version required
+
+# Tested on Rails 5 and 6
+
 ## Description
 
 No need to install other xls gem and don't write logic for that
