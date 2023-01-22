@@ -1,39 +1,30 @@
 # Xls::File
 
-TODO: Delete this and the text below, and describe your gem
+Generate XLS file with data and headers only.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/xls/file`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Description
 
+No need to install other xls gem and don't write logic for that
 ## Installation
+For now =>
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+1. Put gem 'xls-file', git: "https://github.com/rajnish-jarvis/xls-file" in your Gemfile.
+2. bundle install
+3. Confirm installation by calling Xls.test  you will get "Cheers!! xls-file installed successfully" if installation is done.
 
 ## Usage
 
-TODO: Write usage instructions here
+# Create headers
+headers = ['Name', 'Phone Number', 'DOB', 'Location']
+# Create data
+data = [{name: "Test1", phone: '999999999', dob: '15-Jan-1996'}, {name: "Test2", phone: '888888888', dob: '16-Jan-1996'}]
+# Note you can pass ActiveRecord_Relation objcts and array of object both it will convert in hash if objects is ActiveRecord_Relation
+file = Xls.generate_xls(data, headers)
+# It will return newly generated file path, now its depends on you download with helper method (send_file) on controller or upload on any cloud
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/xls-file. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/xls-file/blob/master/CODE_OF_CONDUCT.md).
+## Request from all
+ # I am new in this and this Gem is in not fully completed yet still improving so any suggestions and contributions are most welcome.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Xls::File project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/xls-file/blob/master/CODE_OF_CONDUCT.md).
