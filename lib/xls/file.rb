@@ -17,7 +17,7 @@ module Xls
       path = "tmp/#{filename}"
       package.use_shared_strings = true
       package.serialize(path)
-      return path, type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      return path
     end
     def self.formatted_excel_data(row)
       [
