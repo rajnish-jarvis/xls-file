@@ -4,6 +4,28 @@ require_relative "file/version"
 
 module Xls
   module File
+    def self.generate_xls
+      package = Axlsx::Package.new
+      work_sheet = package.workbook.add_worksheet(name: 'work_book')
+      headers = ["Name", "Phone Number"]
+      data = {name: 'Rajnish Mishra', phone: "7979097455"}
+      work_sheet.add_row headers
+      data.each do |row|
+        formatted_row = formatted_excel_data(row)
+        work_sheet.add_row formatted_row
+      end
+      filename = "Test- #{Date.today.strftime("%dth %b %Y")}"
+      path = "tmp/#{filename}"
+      package.use_shared_strings = true
+      package.serialize(path)
+      return path, type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    end
+    def self.formatted_excel_data(row)
+      [
+        row[:user_name],
+        row[:phone_number]
+      ]
+    end
     def self.call(name)
       puts "Hello, #{name}! I'm Ruby!"
     end
