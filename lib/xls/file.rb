@@ -3,7 +3,6 @@
 require_relative "file/version"
 
 module Xls
-  module File
     def self.generate_xls
       package = Axlsx::Package.new
       work_sheet = package.workbook.add_worksheet(name: 'work_book')
@@ -31,5 +30,4 @@ module Xls
     end
     class Error < StandardError; end
     # Your code goes here...
-  end
 end
