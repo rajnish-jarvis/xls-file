@@ -4,7 +4,7 @@ Generate XLS file with data and headers only.
 
 ## Rails version required
 
-# Tested on Rails 5 and 6
+Tested on Rails 5 and 6
 
 ## Description
 
@@ -18,16 +18,16 @@ For now =>
 
 ## Usage
 
-# Create headers
+Create headers
 headers = ['Name', 'Phone Number', 'DOB', 'Location']
-# Create data
+Create data
 data = [{name: "Test1", phone: '999999999', dob: '15-Jan-1996'}, {name: "Test2", phone: '888888888', dob: '16-Jan-1996'}]
-# Note you can pass ActiveRecord_Relation objcts and array of object both it will convert in hash if objects is ActiveRecord_Relation
+ Note you can pass ActiveRecord_Relation objcts and array of object both it will convert in hash if objects is ActiveRecord_Relation
 file = Xls.generate_xls(data, headers)
-# It will return newly generated file path, now its depends on you download with helper method (send_file) on controller or upload on any cloud
+It will return newly generated file path, now its depends on you download with helper method (send_file) on controller or upload on any cloud
 
 ## Request from all
- # I am new in this and this Gem is in not fully completed yet still improving so any suggestions and contributions are most welcome.
+I am new in this and this Gem is in not fully completed yet still improving so any suggestions and contributions are most welcome.
 
 ## License
 
