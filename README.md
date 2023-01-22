@@ -1,6 +1,6 @@
 # Xls::File
 
-Generate XLS file with data and headers only.
+Generate XLS file with data and headers.
 
 ## Rails version required
 
