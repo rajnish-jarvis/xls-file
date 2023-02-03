@@ -8,7 +8,8 @@ Tested on Rails 5 and 6
 
 ## Description
 
-No need to install other xls gem and don't write logic for that
+I am using famous 'caxlsx' to generate xls file so basically my gem saves the time and line of code for other logic like row and col etc.
+
 ## Installation
 For now =>
 
