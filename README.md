@@ -12,7 +12,7 @@ No need to install other xls gem and don't write logic for that
 ## Installation
 For now =>
 
-1. Put gem 'xls-file', git: "https://github.com/rajnish-jarvis/xls-file" in your Gemfile.
+1. Put gem 'caxlsx' and  gem 'xls-file', git: "https://github.com/rajnish-jarvis/xls-file" in your Gemfile.
 2. bundle install
 3. Confirm installation by calling Xls.test  you will get "Cheers!! xls-file installed successfully" if installation is done.
 
