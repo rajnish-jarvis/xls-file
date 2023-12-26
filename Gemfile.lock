@@ -2,11 +2,12 @@ PATH
   remote: .
   specs:
     xls-file (0.1.0)
+      caxlsx (~> 3.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    caxlsx (4.0.0)
+    caxlsx (3.4.1)
       htmlentities (~> 4.3, >= 4.3.4)
       marcel (~> 1.0)
       nokogiri (~> 1.10, >= 1.10.4)
