@@ -33,9 +33,6 @@ file = Xls.generate_xls(data, headers).
 
 It will return newly generated file path, now its depends on you download with helper method (send_file) on controller or upload on any cloud.
 
-## Request from all
-I am new in this and this Gem is in not fully completed yet still improving and learning something new so any suggestions and contributions are most welcome.
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
