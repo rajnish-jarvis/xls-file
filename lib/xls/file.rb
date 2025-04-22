@@ -2,6 +2,7 @@
 
 require_relative "file/version"
 require 'axlsx'
+require 'csv'
 module Xls
     def self.generate_xls(data, headers)
       package = Axlsx::Package.new
